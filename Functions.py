@@ -89,7 +89,7 @@ def load_dataset(path):
         print('infile: ', infile)
         im = cv2.imread(infile)
         im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-        im = cv2.resize(im, size)
+        #im = cv2.resize(im, size)
         print('resized image: ', im.shape)
         dataset.append(im)
     return dataset

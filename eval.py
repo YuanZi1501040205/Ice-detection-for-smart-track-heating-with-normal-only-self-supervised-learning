@@ -26,7 +26,7 @@ def main():
     import numpy as np
     import torch
     from Functions import tophase
-    from models_zoo_alpha import models
+    from models_zoo import models
     import random
     
     import params as pm

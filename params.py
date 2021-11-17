@@ -28,4 +28,4 @@ freq_range_1_10 = (0, 56)
 time_step = 0.002
 
 # GPU number, if no GPU or only one GPU, should use None instead of a number.
-gpu_number = None
+gpu_number = 2

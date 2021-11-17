@@ -24,10 +24,7 @@ def main():
     import torch
     from models_zoo import models
     from Functions import load_dataset
-    from Functions import extract
-    from Functions import time_normalize
     from Functions import data_norm
-    from torch.utils.data import DataLoader
     import params as pm
 
     # Parse input arguments START
@@ -191,15 +188,13 @@ def main():
             x = data
             y = data
             # The cnn only receive the 1*1*num_points as the input tensor size
-            x = x.to(device)
-            y = y.to(device)
+            x = x.unsqueeze(0).unsqueeze(0).to(device)
+            y = y.unsqueeze(0).unsqueeze(0).to(device)
+
 
 
             # 1. forward propagation
             y_pred = model(x)
-
-            y_pred = y_pred
-
 
 
             # 2. loss calculation
